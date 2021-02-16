@@ -122,3 +122,25 @@ function messyMath(num) {
 // console.log(messyMath(15));
 
 //Twelve Bar Blues
+
+function twelveBarBlues() {
+    for (var i = 1; i<= 12; i ++){
+        if (i % 2 != 0){
+            console.log(i);
+            console.log("chick");
+            console.log("boom");
+            console.log("chick");
+        }
+        else {
+            console.log(i + "chick" , "boom" , "chick");
+        }
+    }
+}
+
+// twelveBarBlues();
+
+//Fibonacci
+
+function fibonacci (num){
+    
+}
