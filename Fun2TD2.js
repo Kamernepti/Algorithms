@@ -144,3 +144,59 @@ function twelveBarBlues() {
 function fibonacci (num){
     
 }
+
+//Sum to One Digit
+
+function sumToOne(num) {
+    var sum = 0;
+    var digits = num.toString().split('');
+    var realDigits = digits.map(Number);
+    // console.log (realDigits);
+    for (var i = 0; i < realDigits.length; i++) {
+        sum = sum + realDigits[i];
+        // console.log (sum);
+    }
+        if (sum >= 10){
+            var newDigits = sum.toString().split('');
+            var finalDigits = newDigits.map(Number);
+            // console.log(finalDigits);
+            var sum = 0;
+            for(var j = 0; j<finalDigits.length; j++){
+                sum = sum + finalDigits[j];
+                return sum;
+            }
+        }else {
+                return sum;
+        }
+}
+
+// console.log(sumToOne(928));
+// console.log(sumToOne(111));
+
+//Clock Hand Angels
+function clockHandAngles(seconds){
+
+}
+
+//Is Prime
+
+function isPrime(num){
+    if (num > 10) {
+        if (num % 2 == 0 || num % 3 == 0 || num % 4 == 0 || num % 5 == 0 || num % 6 == 0 || num % 7 == 0 || num % 8 == 0 || num % 9 == 0){
+            console.log("Number is not Prime");
+        }else {
+            console.log("Number is Prime");
+        }
+    }
+    if (num <=10){
+        if (num == 2 || num == 3 || num == 5 || num == 7){
+            console.log("Number is Prime");
+        } else {
+            console.log("Number is not Prime");
+        }
+    }
+}
+
+// isPrime(41);
+// isPrime(3);
+// isPrime(6);
