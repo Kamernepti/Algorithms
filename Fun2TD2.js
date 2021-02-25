@@ -142,8 +142,16 @@ function twelveBarBlues() {
 //Fibonacci
 
 function fibonacci (num){
-    
+    var fibarr=[];
+    fibarr[0] = 0; 
+    fibarr[1]=1;
+    for (var i = 2; i < num+1; i ++){
+        fibarr[i] = fibarr[i-1] + fibarr[i-2];
+    }
+    console.log(fibarr[num])
 }
+
+// fibonacci(7);
 
 //Sum to One Digit
 
@@ -175,8 +183,21 @@ function sumToOne(num) {
 
 //Clock Hand Angels
 function clockHandAngles(seconds){
-
+    var sec = seconds;
+    var min = sec/60;
+    var hr = min/60;
+    var minAngle = ((min - (Math.trunc(hr)*60)) /60) * 360;
+    var secAngle = ((sec % 60)/60) * 360;
+    if (hr > 24){
+        hr = hr - 24;
+    } 
+    var hrAngle =  (hr/12) * 360;
+    console.log("Hours Hand:", hrAngle+"°");
+    console.log("Minutes Hand:", minAngle+"°");
+    console.log("Seconds Hand:", secAngle+"°");
 }
+
+clockHandAngles(119730);
 
 //Is Prime
 
