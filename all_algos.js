@@ -688,9 +688,9 @@ function drawCenteredChars(num, char){
     console.log(space.repeat((75-num)/2) + char.repeat(num) + space.repeat((75-num)/2)); 
 }
 
-drawLeftChars(4,"-");
-drawRightChars(4, "+");
-drawCenteredChars(4, "#");
+// drawLeftChars(4,"-");
+// drawRightChars(4, "+");
+// drawCenteredChars(4, "#");
 
 //Threes and Fives
 
@@ -891,7 +891,7 @@ function clockHandAngles(seconds){
     console.log("Seconds Hand:", secAngle+"°");
 }
 
-clockHandAngles(119730);
+// clockHandAngles(119730);
 
 //Is Prime
 
@@ -915,3 +915,100 @@ function isPrime(num){
 // isPrime(41);
 // isPrime(3);
 // isPrime(6);
+
+//Rockin' the Dojo Sweatshirt
+
+function sweatshirtPricing(num){
+    var price = 20;
+    if (num == 1){
+        console.log ('$' + price);
+    }
+    if (num ==2){
+        price = Math.ceil(2*(price-(price*.09)))
+        console.log ('$' + price);
+    }
+    if (num ==3){
+        price = Math.ceil(3*(price-(price*.19)))
+        console.log ('$' + price);
+    }
+    if (num >3){
+        price = Math.ceil(num*(price-(price*.35)))
+        console.log ('$' + price);
+    }
+}
+// sweatshirtPricing(1);
+// sweatshirtPricing(2);
+// sweatshirtPricing(3);
+// sweatshirtPricing(4);
+
+//Clock Hand Angles, Revisited
+//come back to this
+
+//Extract-o-Matic
+
+// function extractDigit(num,digitNum){
+//     var digitValue= num / (Math.pow(10, digitNum));
+//     digitValue = Math.trunc(digitValue);
+//     digitValue = digitValue % 10;
+//     console.log (digitValue);
+// }
+
+// extractDigit(1824, 2);
+// extractDigit(1824, 0);
+// extractDigit(1824, 7);
+
+//Second and Third Extract-o-Matic
+
+function extractDigit(num,digitNum){
+    if (num >=0){
+        if (digitNum >= 0){
+            var digitValue= num / (Math.pow(10, digitNum));
+            digitValue = Math.trunc(digitValue);
+            digitValue = digitValue % 10;
+            console.log (digitValue);
+        }
+        if (digitNum < 0){
+            var digitNum= num * (Math.pow(10,digitNum*-1));
+            digitNum=Math.trunc(digitNum);
+            digitNum=digitNum % 10;
+            console.log(digitNum);
+        } 
+    } 
+    if (num < 0){
+        if (digitNum >= 0){
+            var digitValue= num / (Math.pow(10, digitNum));
+            digitValue = Math.trunc(digitValue);
+            digitValue = digitValue % 10;
+            digitValue = -(digitValue);
+            console.log (digitValue);
+        }
+        if (digitNum < 0){
+            var digitNum= num * (Math.pow(10,digitNum*-1));
+            digitNum=Math.trunc(digitNum);
+            digitNum=digitNum % 10;
+            digitValue = -(digitValue);
+            console.log(digitNum);
+        }
+    }
+}
+
+// extractDigit(123.45, -1);
+// extractDigit(-1824, 2);
+
+//Most Significant Digit
+
+function sigDigit (num){
+    var i = num.length;
+    console.log(i);
+    // while (i >= 0) {
+    //     var sig = num / (Math.pow(10, num.length-1));
+    //     if (sig == 0){
+    //         i--;
+    //     }else{
+    //         console.log (sig);
+    //         break;
+    //     }
+    // }
+}
+
+sigDigit(12345);
