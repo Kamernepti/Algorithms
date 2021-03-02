@@ -998,7 +998,6 @@ function extractDigit(num,digitNum){
 //Most Significant Digit
 
 function sigDigit (num){
-<<<<<<< HEAD
     var digit = num;
     while (digit > 10){
         digit /= 10;
@@ -1030,19 +1029,3 @@ function playFives(num) {
 
 // rollOne();
 playFives(4);
-=======
-    var i = num.length;
-    console.log(i);
-    // while (i >= 0) {
-    //     var sig = num / (Math.pow(10, num.length-1));
-    //     if (sig == 0){
-    //         i--;
-    //     }else{
-    //         console.log (sig);
-    //         break;
-    //     }
-    // }
-}
-
-sigDigit(12345);
->>>>>>> cd4351e7f13005ba10f4272ba34d1acfb0b175eb
