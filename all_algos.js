@@ -1015,17 +1015,201 @@ function sigDigit (num){
 //Gaming Fun(damentals)
 
 function rollOne(){
-    console.log(Math.trunc(Math.random ()*5)+1);
+    return (Math.trunc(Math.random ()*6)+1);
 }
 
+//come back to this one- it correctly rolls but doesn't print message good luck
 function playFives(num) {
-    for (var i = 1; i <num+1; i ++){
-        var roll = rollOne();
-        if (roll==5){
-            console.log("That's good luck!");
-        }
+    for (var i = 0; i <num; i ++){
+        rollOne();
+            if (rollOne == 5){
+                console.log("That's good luck!");
+            }
     }
 }
 
+function playStatistics(){
+    statArr=[];
+    for (var i = 0; i < 8; i++) {
+        var value = rollOne();
+        statArr.push(value);
+    }
+    var max = statArr[0];
+    var min = statArr[0];
+    for (var j = 1; j < statArr.length; j++){
+        if (statArr[j]> max){
+            max = statArr[j];
+        }
+        if (statArr[j] < min){
+            min = statArr[j];
+        }
+    }
+    console.log(statArr);
+    console.log("High:" + max);
+    console.log("Low:" + min);
+}
+
+function playStatistics2(){
+    statArr=[];
+    for (var i = 0; i < 8; i++) {
+        var value = rollOne();
+        statArr.push(value);
+    }
+    var max = statArr[0];
+    var min = statArr[0];
+    for (var j = 1; j < statArr.length; j++){
+        if (statArr[j]> max){
+            max = statArr[j];
+        }
+        if (statArr[j] < min){
+            min = statArr[j];
+        }
+    }
+    var sum = 0;
+    for (var s = 0; s < statArr.length; s++) {
+        sum = sum + statArr[s];
+    }
+    console.log(statArr);
+    console.log("High:" + max);
+    console.log("Low:" + min);
+    console.log("Sum:" + sum);
+}
+
+function playStatistics3(num){
+    statArr=[];
+    for (var i = 0; i < num; i++) {
+        var value = rollOne();
+        statArr.push(value);
+    }
+    var max = statArr[0];
+    var min = statArr[0];
+    for (var j = 1; j < statArr.length; j++){
+        if (statArr[j]> max){
+            max = statArr[j];
+        }
+        if (statArr[j] < min){
+            min = statArr[j];
+        }
+    }
+    var sum = 0;
+    for (var s = 0; s < statArr.length; s++) {
+        sum = sum + statArr[s];
+    }
+    console.log(statArr);
+    console.log("High:" + max);
+    console.log("Low:" + min);
+    console.log("Sum:" + sum);
+}
+
+function playStatistics4(num){
+    statArr=[];
+    for (var i = 0; i < num; i++) {
+        var value = rollOne();
+        statArr.push(value);
+    }
+    var max = statArr[0];
+    var min = statArr[0];
+    for (var j = 1; j < statArr.length; j++){
+        if (statArr[j]> max){
+            max = statArr[j];
+        }
+        if (statArr[j] < min){
+            min = statArr[j];
+        }
+    }
+    var sum = 0;
+    for (var s = 0; s < statArr.length; s++) {
+        sum = sum + statArr[s];
+    }
+    var avg = sum/num;
+    console.log(statArr);
+    console.log("High:" + max);
+    console.log("Low:" + min);
+    console.log("Sum:" + sum);
+    console.log("Average:" + avg);
+}
+
 // rollOne();
-playFives(4);
+// playFives(4);
+// playStatistics();
+// playStatistics2();
+// playStatistics3(3);
+// playStatistics4(20);
+
+//Statistics until doubles
+
+function doubleStats(){
+    var arr=[];
+    arr[0] = (Math.trunc(Math.random ()*6)+1);
+    var i = 0;
+    while (arr[i] != arr[i-1]){
+        var roll = (Math.trunc(Math.random ()*20)+1);
+        arr.push(roll);
+        i++
+    }
+    var count= 0;
+    for (var j = 0; j < arr.length; j++){
+        count = count + 1;
+    }
+    var max = arr[0];
+    var min = arr[0];
+    for (var k = 1; k < arr.length; k++){
+        if (arr[k]> max){
+            max = arr[k];
+        }
+        if (arr[k] < min){
+            min = arr[k];
+        }
+    }
+    var sum = 0;
+    for (var s = 0; s < arr.length; s++) {
+        sum = sum + arr[s];
+    }
+    var avg = sum/count;
+    console.log(arr);
+    console.log("# Roles:" + count);
+    console.log("Low:" + min);
+    console.log("High:" + max);
+    console.log("Average:" + avg);
+}
+
+// doubleStats();
+
+//Claire is Where??
+
+var xLocation = 0;
+var yLocation = 0;
+
+function reset(){
+    xLocation = 0;
+    yLocation = 0;
+    console.log("Welcome back Home");
+}
+
+function moveBy(x, y){
+    xLocation = xLocation + x;
+    yLocation = yLocation + y;
+    console.log ('('+xLocation + ',' + yLocation+')');
+}
+
+function xLocate(){
+    console.log(xLocation);
+}
+
+function yLocate(){
+    console.log(yLocation);
+}
+
+function distFromHome(){
+    var dist = Math.sqrt((Math.pow(xLocation, 2)) + (Math.pow(yLocation, 2)));
+    console.log ("Distance from Origin:" , dist + " units");
+}
+
+moveBy(1,-2);
+moveBy(3, 1);
+reset();
+moveBy(1,-2);
+moveBy(3,1);
+xLocate();
+yLocate();
+distFromHome();
