@@ -1205,11 +1205,171 @@ function distFromHome(){
     console.log ("Distance from Origin:" , dist + " units");
 }
 
-moveBy(1,-2);
-moveBy(3, 1);
-reset();
-moveBy(1,-2);
-moveBy(3,1);
-xLocate();
-yLocate();
-distFromHome();
+// moveBy(1,-2);
+// moveBy(3, 1);
+// reset();
+// moveBy(1,-2);
+// moveBy(3,1);
+// xLocate();
+// yLocate();
+// distFromHome();
+
+//Date on a Deserted Island
+
+function weekdayName(weekdayNum){
+    switch(weekdayNum){
+        case 1:
+            console.log("Sunday");
+            break;
+        case 2:
+            console.log("Monday");
+            break;
+        case 3:
+            console.log("Tuesday");
+            break;
+        case 4:
+            console.log("Wednesday");
+            break;
+        case 5:
+            console.log("Thursday");
+            break;
+        case 6:
+            console.log ("Friday");
+            break;
+        case 7:
+            console.log("Saturday");
+            break;
+    }
+}
+
+function weekdayName2(dayNum){
+    switch(dayNum){
+        case 1:
+            console.log("Sunday");
+            break;
+        case 2:
+            console.log("Monday");
+            break;
+        case 3:
+            console.log("Tuesday");
+            break;
+        case 4:
+            console.log("Wednesday");
+            break;
+        case 5:
+            console.log("Thursday");
+            break;
+        case 6:
+            console.log ("Friday");
+            break;
+        case 7:
+            console.log("Saturday");
+            break;
+    }
+    if (dayNum % 7 == 1){
+        console.log("Sunday");
+    }
+    if (dayNum % 7 == 2){
+        console.log("Monday");
+    }
+    if (dayNum % 7 == 3){
+        console.log("Tuesday");
+    }
+    if (dayNum % 7 == 4){
+        console.log("Wednesday");
+    }
+    if (dayNum % 7 == 5){
+        console.log("Thursday");
+    }
+    if (dayNum % 7 == 6){
+        console.log("Friday");
+    }
+    if (dayNum % 7 == 0){
+        console.log("Saturday");
+    }
+}
+
+// weekdayName2(4);
+// weekdayName2(26);
+
+function someDays(){
+    for (var i = 0; i < 17; i++ ){
+        var dayNum = Math.trunc(Math.random()*365+1)
+        weekdayName2(dayNum);
+            if (dayNum % 7 == 1 || dayNum % 7 == 0) {
+                console.log("Enjoy your day off!")
+            } else {
+                console.log ("Work hard!")
+            }
+    }
+}
+
+// someDays();
+
+function monthName(monthNum){
+    monthArr = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agusto', 'septembre', 'octubre', 'noviembre', 'diciembre'];
+    console.log(monthArr[monthNum-1]);
+}
+
+// monthName(5);
+
+function monthDays(monthNum){
+    monthArr = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agusto', 'septembre', 'octubre', 'noviembre', 'diciembre'];
+    switch (monthNum){
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            console.log(monthArr[monthNum-1] + ":" + "31 dios");
+            break;
+        case 2:
+            console.log(monthArr[monthNum-1] + ":" + "28 dios");
+            break;
+        case 4: case 6: case 9: case 11:
+            console.log(monthArr[monthNum-1] + ":" + "30 dios");
+            break;
+    }
+}
+
+// monthDays(9);
+// monthDays(5);
+// monthDays(2);
+
+function dayToMonth(dayNum){
+    monthArr = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agusto', 'septembre', 'octubre', 'noviembre', 'diciembre'];
+    if (dayNum <= 31){
+        console.log(monthArr[0]);
+    }
+    if (31 < dayNum && dayNum <= 59){
+        console.log(monthArr[1]);
+    }
+    if (59 < dayNum && dayNum <= 90){
+        console.log(monthArr[2]);
+    }
+    if (90 < dayNum && dayNum <= 120){
+        console.log(monthArr[3]);
+    }
+    if (120 < dayNum && dayNum <= 151){
+        console.log(monthArr[4]);
+    }
+    if (151 < dayNum && dayNum <= 181){
+        console.log(monthArr[5]);
+    }
+    if (181 < dayNum && dayNum <= 212){
+        console.log(monthArr[6]);
+    }
+    if (212 < dayNum && dayNum <= 243){
+        console.log(monthArr[7]);
+    }
+    if (243 < dayNum && dayNum <= 273){
+        console.log(monthArr[8]);
+    }
+    if (273 < dayNum && dayNum <= 304){
+        console.log(monthArr[9]);
+    }
+    if (304 < dayNum && dayNum <= 335){
+        console.log(monthArr[10]);
+    }
+    if (335 < dayNum && dayNum <= 365){
+        console.log(monthArr[11]);
+    }
+}
+
+dayToMonth(75);
