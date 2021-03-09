@@ -1372,4 +1372,61 @@ function dayToMonth(dayNum){
     }
 }
 
-dayToMonth(75);
+// dayToMonth(75);
+
+function fullDate(dayNum){
+    monthArr = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agusto', 'septembre', 'octubre', 'noviembre', 'diciembre'];
+    var month;
+    var day;
+    if (dayNum <= 31){
+        month = monthArr[0];
+        day = dayNum;
+    }
+    if (31 < dayNum && dayNum <= 59){
+        month = monthArr[1];
+        day = dayNum - 31;
+    }
+    if (59 < dayNum && dayNum <= 90){
+        month = monthArr[2];
+        day = dayNum - 59;
+    }
+    if (90 < dayNum && dayNum <= 120){
+        month = monthArr[3];
+        day = dayNum - 90;
+    }
+    if (120 < dayNum && dayNum <= 151){
+        month = monthArr[4];
+        day = dayNum - 120;
+    }
+    if (151 < dayNum && dayNum <= 181){
+        month = monthArr[5];
+        day = dayNum - 151;
+    }
+    if (181 < dayNum && dayNum <= 212){
+        month = monthArr[6];
+        day = dayNum - 181;
+    }
+    if (212 < dayNum && dayNum <= 243){
+        month = monthArr[7];
+        day = dayNum - 212;
+    }
+    if (243 < dayNum && dayNum <= 273){
+        month = monthArr[8];
+        day = dayNum - 243;
+    }
+    if (273 < dayNum && dayNum <= 304){
+        month = monthArr[9];
+        day = dayNum - 273;
+    }
+    if (304 < dayNum && dayNum <= 335){
+        month = monthArr[10];
+        day = dayNum - 304;
+    }
+    if (335 < dayNum && dayNum <= 365){
+        month = monthArr[11];
+        day = dayNum - 335;
+    }
+    console.log (month +" " + day +", 2020");
+}
+
+fullDate(142);
