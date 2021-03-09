@@ -297,5 +297,158 @@
         </ol>
         <p>Having completed this epic saga, you are ready for additional concepts and chapters! Journey safely….</p>
 
+    <br>
+    <h2><u>Arrays</u></h2>
+    <h3>Push Front</h3>
+    <p>Given an array and an additional value, insert this value at the beginning of the array. Do this without using any built-in array methods.</p>
+
+    <h3>Pop Front</h3>
+    <p>Given an array, remove and return the value at the beginning of the array. Do this without using any built-in array methods except pop().</p>
+
+    <h3>Insert At</h3>
+    <p>Given an array, index, and additional value, insert the value into array at given index. Do this without using built-in array methods. You can think of pushFront(arr,val) as equivalent to insertAt(arr,0,val).</p>
+
+    <h3>Remove at</h3>
+    <p>Given an array and an index into array, remove and return the array value at that index. Do this without using built-in array methods except pop(). Think of popFront(arr) as equivalent to removeAt(arr,0).</p>
+
+    <h3>Swap Pairs</h3>
+    <p>Swap positions of successive pairs of values of given array. If length is odd, do not change the final element. For [1,2,3,4], return [2,1,4,3]. For example, change input ["Brendan",true,42] to [true,"Brendan",42]. As with all array challenges, do this without using any built-in array methods.</p>
+
+    <h3>Remove Duplicates</h3>
+    <p>Sara is looking to hire an awesome web developer and has received applications from various sources. Her assistant alphabetized them but noticed some duplicates. Given a sorted array, remove duplicate values. Because array elements are already in order, all duplicate values will be grouped together. As with all these array challenges, do this without using any built-in array methods.</p>
+    <p>Second: Solve this without using any nested loops.</p>
+
+    <h3>Min to Front</h3>
+    <p>Given an array of comparable values, move the lowest element to array’s front, shifting backward any elements previously ahead of it. Do not otherwise change the array’s order. Given [4,2,1,3,5], change it to [1,4,2,3,5] and return it. As always, do this without using built-in functions.</p>
+
+    <h3>Remove Negatives</h3>
+    <p>Implement removeNegatives() that accepts an array, removes negative values, and returns the same array (not a copy), preserving non-negatives’ order. As always, do not use built-in array functions.</p>
+
+    <h3>Second-to-Last</h3>
+    <p>Return the second-to-last element of an array. Given [42,true,4,"Kate",7], return "Kate". If array is too short, return null.</p>
+
+    <h3>Second-Largest</h3>
+    <p>Return the second-largest element of an array. Given [42,1,4,Math.PI,7], return 7. If the array is too short, return null.</p>
+
+    <h3>Nth-to-Last</h3>
+    <p>Return the element that is N-from-array’s-end. Given ([5,2,3,6,4,9,7],3), return 4. If the array is too short, return null.</p>
+
+    <h3>Nth-Largest</h3>
+    <p>Liam has "N" number of Green Belt stickers for excellent Python projects. Given arr and N, return the Nth-largest element, where (N-1) elements are larger. Return null if needed.</p>
+    
+    <h3>Skyline Heights</h3>
+    <p>Lovely Burbank has a breathtaking view of the Los Angeles skyline. Let’s say you are given an array with heights of consecutive buildings, starting closest to you and extending away. Array [-1,7,3] would represent three buildings: first is actually out of view below street level, behind it is second at 7 stories high, third is 3 stories high (hidden behind the 7-story). You are situated at street level. Return array containing heights of buildings you can see, in order. Given [-1,1,1,7,3] return [1,7]. Given [0,4] return [4]. As always with challenges, do not use built-in array functions such as unshift().</p>
+
+    <h3>Credit Card Validation</h3>
+    <p>The Luhn formula is sometimes used to validate credit card numbers. Create the function isCreditCardValid(digitArr) that accepts an array of digits on the card (13-19 depending on the card), and returns a boolean whether the card digits satisfy the Luhn formula, as follows:</p>
+    <ol>
+        <li>Set aside the last digit; do not include it in these calculations (until step 5);</li>
+        <li>Starting from the back, multiply the digits in odd positions (last, third-to-last, etc.) by 2;</li>
+        <li>If any results are larger than 9, subtract 9 from them;</li>
+        <li>Add all numbers (not just our odds) together;</li>
+        <li>Now add the last digit back in – the sum should be a multiple of 10.</li>
+    </ol>
+    <p>For example, when given digit array [5,2,2,8,2], after step 1) it becomes [5,2,2,8], then after step 2) it is [5,4,2,16]. Post-3) we have [5,4,2,7], then following 4) it becomes 18. After step 5) our value is 20, so ultimately we return true. If the final digit were any non-multiple-of-10, we would instead return false.</p>
+
+    <h3>Shuffle</h3>
+    <p>In JavaScript, the Array object has numerous useful methods. It does not, however, contain a method that will randomize the order of an array’s elements. Let’s create shuffle(arr), to efficiently shuffle a given array’s values. Work in-place, naturally. Do you need to return anything from your function?</p>
+
+    <h3>Remove Range</h3>
+    <p>Given array, and indices start and end, remove vals in that index range, working in-place (hence shortening the array). Given ([20,30,40,50,60,70],2,4), change to [20,30,70] and return it.</p>
+
+    <h3>Intermediate Sums</h3>
+    <p>You will be given an array of numbers. After every tenth element, add an additional element containing the sum of those ten values. If the array does not end aligned evenly with ten elements, add one last sum that includes those last elements not yet been included in one of the earlier sums. Given the array [1,2,1,2,1,2,1,2,1,2,1,2,1,2], change it to [1,2,1,2,1,2,1,2,1,2,15,1,2,1,2,6].</p>
+
+    <h3>Double Trouble</h3>
+    <p>Create a function that changes a given array to list each original element twice, retaining original order. Convert [4,"Ulysses",42,false] to [4,4,"Ulysses","Ulysses",42,42,false,false].</p>
+
+    <h3>Zip It</h3>
+    <p>Create a standalone function that accepts two arrays and combines their values sequentially into a new array, at alternating indices starting with first array. Extra values from either array should be included afterward. Given [1,2] and [10,20,30,40], return new array containing [1,10,2,20,30,40].</p>
+    <p>Second: combine the two arrays’ values into the first array, instead of into a new array. Much more fun!</p>
+
+    <h3>Average (Warmup)</h3>
+    <p>(Warm-up) Always run through some quick algorithm problems before any coding interview, to get yourself warmed up. How about this one: return the average value of an array of unsorted numbers.</p>
+
+    <h3>Balance Point</h3>
+    <p>Write a function that returns whether the given array has a balance point between indices, where one side’s sum is equal to the other’s. Example: [1,2,3,4,10] → true (between indices 3 & 4), but [1,2,4,2,1] → false.</p>
+
+    <h3>Balance Index</h3>
+    <p>Here, a balance point is on an index, not between indices. Return the balance index where sums are equal on either side (exclude its own value). Return -1 if none exist. Ex.: [-2,5,7,0,3] → 2, but [9,9] → -1.</p>
+
+    <h3>Taco Truck</h3>
+    <p>Joe drives a taco truck in the booming town of Squaresburg. He uses an array of [x,y] coordinates corresponding to locations of his customers. They walk to his truck, but he is fair-minded so he wants to minimize total distance from truck to customers. City blocks are perfect squares, and every street is two-way, at perfect right angles. He only parks by street corners (coordinates like [37,-16]). Customers only travel on streets: coordinate [2,-2] is distance 4 from [0,0]. Joe checks the array before deciding where to park. Given a customer coordinate array, return an optimal taco truck location. Example: given [ [10,0], [-1,-10], [2,4] ], return [2,0], as total distance is 25 (8+13+4).</p>
+
+    <h3>Array: Binary Search</h3>
+    <p>Given a sorted array and a value, return whether the array contains that value. Do not sequentially iterate the array. Instead, ‘divide and conquer’, taking advantage of the fact that the array is sorted. As always, only use built-in functions that you are prepared to recreate (write yourself) on demand!</p>
+
+    <h3>Min of Sorted-Rotated</h3>
+    <p>You will be given a numerical array that has first been sorted, then rotated by an unknown amount. Find and return the minimum value in that array. Don’t use built-in functions (surprise!). </p>
+    <p>Given the input array ["Gigli","Jay is  cool","Mavis","Phoebe","Thurber","Anna","Celeste","Elon"], you should return "Anna". Remember, do not linearly iterate the array!</p>
+
+    <h3>String:Binary Search</h3>
+    <p>You will be given a very long string and a single character. Return whether that character is present in the string. Note: the characters in the string have been arranged so that the charCodeAt() values for each character are monotonically ascending from the beginning of the string to the back. Use the fact that the string is effectively sorted. Don’t use built-in functions. Note: characters may not be exactly as you might have considered ‘alphabetized’, but char.charCodeAt() works well. </p>
+    <p>Example: if your function is given the inputs (" &-0379DEFXZ[abcz|", "6"), it should return false. If instead it is sent (" &-0379DEFXZ[abcz|", "c"), return true. Remember, don’t iterate the string linearly!</p>
+
+    <h3>Flatten</h3>
+    <p>Flatten a given array, eliminating nested and empty arrays. Do not alter it; return a new one retaining order. For [1,[2,3],4,[]] return [1,2,3,4].</p>
+    <p>Second: work ‘in-place’ in the given array (do not create another). Alter order if needed. Ex.: [1,[2,3],4,[]] could become [1,3,4,2].</p>
+    <p>Third: make your algorithm both in-place and stable. Do you need a return value?</p>
+
+    <h3>Remove Duplicates</h3>
+    <p>Remove array duplicates. Do not alter original. Return new array with results ‘stable’ (original order). For [1,2,1,3,4,2] return [1,2,3,4].</p>
+    <p>Second: work ‘in-place’ in given array. Alter order if needed (stability is not required). Ex.: [1,2,1,3,4,2] could become [1,2,4,3].</p>
+    <p>Third: make it in-place and stable.</p>
+    <p>Fourth: eliminate any second (inner) loop.</p>
+
+    <h3>Mode</h3>
+    <p>Back in the Basic 13, you wrote code to compute an array’s minimum and maximum values. You also wrote code to determine the average value (the “mean”). What about the “mode” – the most common value in that data set. Create a function that, given an array, returns the most frequent value in the array.</p>
+    <p>Second: memory constraints prevent your using a new array. How does this affect your solution?</p>
+
+    <h3>Buffer Copy</h3>
+    <p>Create arrBufferCopy(sourceArr,destArr,sourceStartIdx,destStartIdx,numVals) to copy numVals values starting at sourceArr[sourceStartIdx] to destArr[destStartIdx] etc. Do not lengthen destArr, nor read off the end of sourceArr.</p>
+    <p>Second: if you reach either array’s end, wraparound to continue writing/reading at beginning of array.</p>
+    <p>Third: if numVals > destArr.length, only copy the minimum needed amount.</p>
+    <p>Fourth: sourceArr can now be the same array as destArr! Only handle the non-wrap case. That is, you can assume that you won’t need to read beyond arr.length. You can extend the array on writes.</p>
+    <p>Fifth: if you made it this far, good job! Now for a real challenge: handle all possible cases where sourceArr and destArr are the same array, including wraparound, not overwriting original array data prematurely, nor extending it, but copying all data in-place. If arr.length is 100, how would you handle significant wraparound and overwriting, such as arrBufferCopy(arr,arr,30,80,95)?</p>
+
+    <h3>Smarter Sum</h3>
+    <p>Use time-space tradeoff to accelerate average running time for iSigma(num) that returns sum of integers from 1 to num. Recall iSigma(1)=1, iSigma(2)=3, iSigma(3)=6, iSigma(4)=10.</p>
+
+    <h3>Faster Factorial</h3>
+    <p>Remember Factorial(num)? It returned the product of positive integers from 1 to num. Examples: Factorial(1) = 1, Factorial(2) = 2, Factorial(3) = 6. For these purposes, Factorial(0) = 1. Recreate this function, but use a time-space tradeoff to accelerate the average running time.</p>
+
+    <h3>Fancy Fibonacci</h3>
+    <p>Use time-space tradeoff to accelerate running time of iFib(num) that returns numth number in theFibonacci sequence. Recall iFib(0)=0, iFib(1)=1, iFib(2)=1, iFib(3)=2.</p>
+
+    <h3>Tricky Tribonacci</h3>
+    <p>Why stop with Fibonacci? Create a function to retrieve a “Tribonacci” number, which we will define as the sum of the previous 3 values. Tribonaccis start with { 0, 0, 1, 1, 2, 4, 7, 13, 24, 44, 81, ... }. Again, use a time-space tradeoff to make it fast.</p>
+
+    <h3>Median of Sorted Arrays</h3>
+    <p>Given two arrays that are sorted but not necessarily the same length, find the median value. Given ([1,5,9], [1,2,3,4,5,6]), return 4. If the number of values is even, return the average of the two middle values. Given ([1,5,9], [1,2,3,4,5]), return 3.5.</p>
+    <p>Second: accept three arrays instead of two.</p>
+
+    <h3>Time to English</h3>
+    <p>You are given an integer representing the number of minutes that have elapsed since midnight. You should return a string  representing the current time, in the traditional spoken convention. Use numerals, except specifically the following words – midnight, noon, past, til, half, quarter. Examples: if given 30, return "half past midnight". If given 75, return "quarter past 1 am". If given 710, return "10 til noon". If given 1000, return "20 til 5 pm".</p>
+
+    <h3>Missing Value</h3>
+    <p>You are given an array of length N that contains, in no particular order, integers from 0 to N. One integer value is missing. Quickly determine and return the missing value. Given ([3,0,1]), return 2.</p>
+    <p>Second: now the lowest value can now be any integer (including negatives), instead of always being 0. Given ([2,-4,0,-3,-2,1]) return -1. Given ([5,2,7,8,4,9,3]), return 6.</p>
+
+    <h3>Rain Terraces</h3>
+    <p>The Seattle Coding Dojo wants to send excess water to the Burbank Coding Dojo, so it landscapes its rooftop with a set of unusually elevated terraces. The terraces are all the same width but have varying heights. When it rains, water gathers in the low terraces that are surrounded by taller ones. For example, if we have terraces with heights [3,1,1,4,2], then as much as 4 units of water could be
+        gathered, because water would pool 2-deep on two different terraces (both of the 1-high terraces: between the 3-high and 4-high terraces). Water on the other terraces just runs off the sides. Given an array of terrace heights, return the maximum amount of water that is trapped when rains come.</p>
+
+    <h3>Last Digit of A to the B</h3>
+    <p>Modern computers can handle very large numbers, but they do have their limits. A number that is repeatedly multiplied by itself will eventually exceed a computer’s ability to accurately represent it. (Note: the number of times it is multiplied by itself is called an exponent.) For an optional end-of-chapter challenge, determine the smallest (least significant) digit of a number that is potentially very, very large. You may find that you must do this without computing the actual (unimaginably large) number.</p>
+    <p>Implement a function lastDigitAtoB(a,b) that accepts two non-negative integers. It should return the last digit of a number found by raising the first number (a) to an exponent of the second number (b). Examples: given (3,4), you should return 1 (3 * 3 * 3 * 3 is 81, whose last digit is 1). Given (12,5), return 2 (which is the least significant digit of 248832: 12 * 12 * 12 * 12 * 12). How high can you scale your solution? For example, what is the return value for (237,124)?</p>
+
+    <h3>Matrix Search</h3>
+    <p>Mike digs image recognition and wants to create a JavaScript Imaging Library, just like PIL for Python. He is given 2 different two-dimensional arrays, containing integers between 0 and 65535. Each two-dimensional array represents a gray-scale image, where each integer value is a pixel. The second image might be found somewhere within the larger one. Return whether it is.</p>
+    <p>Second: Return location of first match found ([-1,-1] if no match). In example above, return [2,1].</p>
+
+    <h3>Max of Subarray Sums</h3>
+    <p>How efficient can you be in this following final challenge? The input may hold many million values.</p>
+    <p>Given a numerical array that is potentially very long, return the maximum sum of values from a subarray. Any consecutive sequence of indices in the array is considered a subarray. Create a function that returns the highest sum possible from these subarrays. Given [1,2,-4,3,-2,3,-1], you should return 4 (for subarray [3,-2,3]), and given [-1,-2,-4,-3,-2,-3], return 0 (for []). This problem has many possible implementations. Which do you prefer & why?</p>
+
     </body>
 </html>
