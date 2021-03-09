@@ -1429,4 +1429,18 @@ function fullDate(dayNum){
     console.log (month +" " + day +", 2020");
 }
 
-fullDate(142);
+// fullDate(142);
+
+//Push Front
+
+function pushFront(arr, num){
+    for (var i = arr.length; i >0; i--){
+        arr[i] = arr[i-1];
+    }
+    arr[0]=num;
+    console.log(arr);
+}
+
+// pushFront([1,2,3,4], 0);
+
+//Pop Front
