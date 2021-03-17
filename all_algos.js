@@ -1444,3 +1444,79 @@ function pushFront(arr, num){
 // pushFront([1,2,3,4], 0);
 
 //Pop Front
+
+function popFront(arr){
+    var first = arr[0];
+    for (var i = 0; i < arr.length; i++){
+        arr[i]= arr[i+1]
+    }
+    arr.pop();
+    console.log(arr);
+    return first;
+}
+
+// console.log(popFront([1,2,3,4]));
+
+//Insert At
+
+function insertAt(arr, ind, num){
+    for (var i = 0; i < arr.length; i++){
+        if (i == ind){
+            for (var j = arr.length; j>i; j--){
+                arr[j] = arr[j-1];
+            }
+            arr[ind] = num;
+        }
+    }
+    console.log (arr);
+}
+
+// insertAt([1,2,4,5], 2, 3);
+
+//Remove at
+
+function removeAt(arr, ind){
+    var removedVal = arr[ind];
+    for (var i = 0; i < arr.length; i ++){
+        if (i == ind){
+            for (var j = ind; j < arr.length; j++){
+                arr[j]= arr[j+1];
+            }
+            arr.pop();
+        }
+    }
+    console.log (arr);
+    console.log (removedVal);
+}
+
+// removeAt([1,2,3,4,5], 2);
+
+//Swap Pairs
+
+function swapPairs(arr){
+    if (arr.length % 2 == 0){
+        for (var i = 0; i <arr.length; i +=2){
+            var temp = arr[i];
+            arr[i]=arr[i+1];
+            arr[i+1]=temp;
+        }
+    } else {
+        for (var i = 0; i <arr.length-1; i +=2){
+            var temp = arr[i];
+            arr[i]=arr[i+1];
+            arr[i+1]=temp;
+        }
+    }
+    console.log(arr);
+}
+
+// swapPairs([1,2,3,4,5]);
+
+//Remove Duplicates
+
+function removeDuplicates(arr){
+    
+    console.log (arr);
+}
+
+removeDuplicates([1,1,2,3,4,5,5,5,6]);
