@@ -1512,11 +1512,78 @@ function swapPairs(arr){
 
 // swapPairs([1,2,3,4,5]);
 
-//Remove Duplicates
+//Remove Duplicates***************************************************************************************************************
 
 function removeDuplicates(arr){
-    
-    console.log (arr);
+    var newarr=[];
+    for (var i = 0; i <arr.length-1; i ++){
+        if (arr[i] =! arr[i+1]){
+            newarr[i]= arr[i];
+            console.log(newarr);
+        }
+    }
 }
 
-removeDuplicates([1,1,2,3,4,5,5,5,6]);
+// removeDuplicates([1,1,2,3,4,5,5,5,6]);
+
+//Min to Front*************************************************************************************************
+
+function minToFront(arr){
+    var min = arr[0];
+    for (var i = 1; i < arr.length; i++){
+        if (arr[i]<min){
+            min = arr[i];
+        }
+    }
+    var temp = arr[0];
+    arr[0]= min;
+    for (var j = 0; j > arr.length; j ++){
+        var temp = arr[i];
+        var temp = arr[i+1];
+        arr[i+1]= temp;
+    }
+    console.log (arr)
+    console.log(min);
+}
+
+// minToFront([4,2,1,3,5,6,0]);
+
+//remove negatives*****************************************************************************************************
+
+
+//Second to Last
+
+function secondToLast(arr){
+    if (arr.length > 1){
+        console.log(arr[arr.length-2]);
+    } else {
+        console.log("Null");
+    }
+}
+
+// secondToLast([42, true, "Kate", 7]);
+// secondToLast([1]);
+
+//Second Largest Value
+
+function secondLargest(arr){
+    if (arr.length <2){
+        return console.log("Null");
+    }
+    var max = arr[0];
+    var sMax = arr[1];
+    for (var i = 2; i< arr.length; i ++){
+        if (arr[i]> max){
+            max = arr[i];
+        }
+        if (arr[i]>sMax && arr[i]<max){
+            sMax = arr[i];
+        }
+    }
+    console.log(sMax);
+}
+
+// secondLargest([42,1,4,Math.PI,7]);
+// secondLargest([1]);
+
+//Nth to the Last
