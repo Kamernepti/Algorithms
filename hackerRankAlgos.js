@@ -43,4 +43,34 @@ function birthdayCakeCandles(arr){
     console.log (count);
 };
 
-birthdayCakeCandles([4,4,1,3]);
+// birthdayCakeCandles([4,4,1,3]);
+
+function diagonalDiff(n, arr){
+    var sum1 = 0;
+    var sum2 = 0;
+    for (var i = 0; i < n; i++){
+        sum1 += arr[i][i];
+    }
+    for (var j = n-1; j >= 0; j--){
+        sum2 += arr[j][n-j-1];
+    }
+    console.log(sum1-sum2);
+};
+
+// diagonalDiff(3,[[11,2,4],[4,5,6],[10,8,-12]]);
+
+function gradingStudents(n){
+    if ((n+2) % 5 ==0 && n > 37){
+        n = n + 2;
+    }
+    if ((n+1) % 5 ==0 && n > 37){
+        n = n + 1;
+    }
+    
+    console.log(n);
+};
+
+// gradingStudents(89);
+// gradingStudents(29);
+// gradingStudents(73);
+// gradingStudents(67);
