@@ -74,3 +74,44 @@ function gradingStudents(n){
 // gradingStudents(29);
 // gradingStudents(73);
 // gradingStudents(67);
+
+function camelCase(s){
+    var count = 1;
+    var character = '';
+    for (var i = 0; i < s.length; i ++){
+        character = s.charAt(i);
+        if (character == character.toUpperCase()){
+            count += 1;
+        }
+    }
+    console.log(count);
+}
+
+// camelCase("oneTwoThree");
+
+function strongPassword(n, password){
+    var numbers=[0,1,2,3,4,5,6,7,8,9];
+    var lower_case=['a','b','c','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    var upper_case=[];
+    var special_character=[];
+    if (n < 6){
+        console.log()
+    }
+}
+
+//come back to this one*********************************************************************************above
+
+function cipher(s, k){
+    var alphabet=['a','b','c','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+    var character = ""
+    for (var i = 0; i < s.length; i++){
+        character= s.charAt(i);
+        if (s.character == alphabet[i]){
+            s.character = alphabet[i+k]; 
+        }
+    }
+    console.log(s);
+}
+
+cipher("jgnnq", 2);
+//this one isn't quite right
