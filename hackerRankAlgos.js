@@ -113,5 +113,11 @@ function cipher(s, k){
     console.log(s);
 }
 
-cipher("jgnnq", 2);
+// cipher("jgnnq", 2);
 //this one isn't quite right
+
+//Finding the Percentage
+
+function percentage(){
+    
+}

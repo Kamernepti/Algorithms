@@ -1587,3 +1587,8 @@ function secondLargest(arr){
 // secondLargest([1]);
 
 //Nth to the Last
+
+function nLast(){
+
+}
+
