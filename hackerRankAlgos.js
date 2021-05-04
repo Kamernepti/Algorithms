@@ -116,8 +116,20 @@ function cipher(s, k){
 // cipher("jgnnq", 2);
 //this one isn't quite right
 
-//Finding the Percentage
+//Sales by Match
 
-function percentage(){
-    
+function sockMerchant(n, arr){
+    arr.sort(function(a, b){return a-b});
+    var pairs = 0;
+    for (var i = 0; i < n; i++){
+        if (arr[i+2] == arr[i+1] && arr[i+1] == arr[i]){
+            pairs +=1
+        }
+    }
+    var odds= n-(pairs*2);
+    console.log (arr);
+    console.log (pairs);
+    console.log (odds);
 }
+
+sockMerchant (7, [1,2,1,2,1,3,2]);
