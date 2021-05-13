@@ -220,6 +220,19 @@ function xInY(arr, x, y){
 //Removing Negatives
 
 function removeNegs(arr){
+    var numNegs = 0;
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] < 0){
+            numNegs ++;
+        }
+        else {
+            arr[i - numNegs] = arr[i];
+        }
+    }
+    while (numNegs --){
+        arr.pop();
+    }
+    console.log(arr);
 }
 
 removeNegs([0, -1, 2, -3, 4, -5, 6]);
