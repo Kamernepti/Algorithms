@@ -132,4 +132,28 @@ function sockMerchant(n, arr){
     console.log (odds);
 }
 
-sockMerchant (7, [1,2,1,2,1,3,2]);
+// sockMerchant (7, [1,2,1,2,1,3,2]);
+
+//Counting Valleys
+
+function valleys(path){
+    var count = 0;
+    var valley = 0;
+    for (var i = 0; i < path.length; i ++){
+        if (path[i] == "U"){
+            count -= 1;
+            if (count == 0){
+                valley +=1
+            }
+        }
+        if (path[i] == "D"){
+            count += 1;
+            if (count == 0){
+                valley +=1
+            }
+        }
+    }
+    console.log (valley);
+}
+
+valleys(["U","D","D","D","U","D","U","U"])
